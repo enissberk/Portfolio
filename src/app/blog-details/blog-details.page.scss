@@ -1,0 +1,50 @@
+:host{
+    img{
+        width: 100%;
+    }
+    .container-fluid{
+        padding: 5px 0px 25px 0px;
+        .container{
+            width: 100%;
+            padding: 15px;
+            strong{
+                font-size: 1.5rem;
+                padding-top: 25px;
+            }
+            p{
+                color: rgb(73, 73, 73);
+            }
+        }
+    }
+
+    ion-footer{
+        width: 100%;
+        height: 250px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        ion-toolbar{
+          margin-bottom: 80px;
+          b{
+            color: #45505B;
+            font-size: 1.5rem;
+          }
+          p{
+            color: gray;
+            font-style: italic;
+            font-family: "Open Sans", sans-serif;
+          }
+        }
+        .socical-media{
+          width: 50%;
+        }
+        span{
+          padding: 15px;
+          font-size: 0.9rem;
+          font-family: "Open Sans", sans-serif;
+          color: gray;
+        }
+      }
+}

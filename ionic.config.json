@@ -1,0 +1,7 @@
+{
+  "name": "Forum",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Forum",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

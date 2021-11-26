@@ -1,0 +1,57 @@
+<header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button color="dark" menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</header>
+
+<ion-content *ngIf="user">
+  <ion-card *ngFor="let blog of this.blog">
+    <ion-card-header >
+      <img [src]="blog.images">
+    </ion-card-header>
+    <ion-card-content>
+      <ion-card-title>{{blog.title}}</ion-card-title>
+      <ion-card-subtitle>
+        <ion-icon name="calendar-outline"></ion-icon>
+        {{blog.date | date:'dd/MM/yyyy'}}
+      </ion-card-subtitle> 
+      {{blog.content}}
+    </ion-card-content>
+    <ion-button [routerLink]="[blog._id]">Show More</ion-button>
+  </ion-card>
+
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar>
+      <b>{{user.name}} {{user.surname}}</b>
+      <p>{{user.bio}}</p>
+    </ion-toolbar>
+    <div class="socical-media">
+      <ion-fab horizontal="start" vertical="bottom" slot="fixed" activated="true">
+        <ion-fab-button>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="end">
+          <ion-fab-button color="light">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://twitter.com/enisberk0" color="light">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.instagram.com/enisaltnbs7/" color="light">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.discord.com/" color="light">
+            <ion-icon name="logo-discord"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.github.com/" color="light">
+            <ion-icon name="logo-github"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
+    <span>© Copyright <b>{{user.name}}</b>. All Rights Reserved Designed by enisberk</span>
+  </ion-footer>
+</ion-content>

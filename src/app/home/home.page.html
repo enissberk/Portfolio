@@ -1,0 +1,203 @@
+<header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button color="dark" menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</header>
+
+<ion-content ngIf="user">
+
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button  href="./home#home">
+      <ion-icon name="arrow-up-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="container">
+    <ion-toolbar>
+      <h2>{{user.name}} {{user.surname}}</h2>
+      <ion-label>My job <span>{{user.jobs}}</span></ion-label>
+      <img [src]="user.images[0]">
+    </ion-toolbar>
+  </div>
+
+  <div class="about" id="about">
+    <strong>About</strong>
+    <p>{{user.bio}}</p>
+  </div>
+
+  <div class="personal-about">
+    <ion-label>
+      <span>
+        <ion-icon color="primary" name="chevron-forward-outline"></ion-icon><b>Name : </b>{{user.name}}
+      </span>
+      <span>
+        <ion-icon color="primary" name="chevron-forward-outline"></ion-icon><b>Surname : </b>{{user.surname}}
+      </span>
+      <span>
+        <ion-icon color="primary" name="chevron-forward-outline"></ion-icon><b>Birthday : </b>{{user.birthday | date:
+        'dd/MM/yyyy'}}
+      </span>
+      <span>
+        <ion-icon color="primary" name="chevron-forward-outline"></ion-icon><b>Age : </b>{{age}}
+      </span>
+      <span>
+        <ion-icon color="primary" name="chevron-forward-outline"></ion-icon><b>Phone : </b>{{user.phone}}
+      </span>
+      <span>
+        <ion-icon color="primary" name="chevron-forward-outline"></ion-icon><b>Mail : </b>{{user.mail}}
+      </span>
+    </ion-label>
+  </div>
+
+  <div class="facts" id="facts">
+    <strong>Facts</strong>
+    <div class="line"><div class="inner-line"></div></div>
+    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <ion-label class="facts-features"  *ngFor="let fact of user.facts">
+      <ion-icon name="happy-outline"></ion-icon>
+      <h2>{{fact.count}}</h2>
+      <h6>{{fact.name}}</h6>
+    </ion-label>
+  </div>
+
+  <div class="skills" id="skills">
+    <strong>Skills</strong>
+    <div class="line"><div class="inner-line"></div></div>
+    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <div *ngFor="let skill of user.skills">
+      <ion-label>
+        <p>{{skill.name}}</p>
+        <p>{{skill.percent}}</p>
+      </ion-label>
+      <div class="skill-percent">
+        <div class="percent" [ngStyle]="{'width': skill.percent+'%'}"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="resume" id="resume">
+    <strong>Resume</strong>
+    <div class="line"><div class="inner-line"></div></div>
+    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+    <ion-label *ngFor="let resume of user.resume">
+      <h3>{{resume.category}}</h3>
+      <h4 *ngFor="let resumedetail of resume.resume_in">
+        <span><p>{{resumedetail.position}}</p></span>
+        <p class="year">{{resumedetail.years}}</p>
+        <p>{{resumedetail.description}}</p>
+      </h4>
+    </ion-label>
+  </div>
+
+  <div class="portfolio" id="portfolio">
+    <strong>Portfolio</strong>
+    <p>{{user.bio}}</p>
+    <ion-toolbar>
+      <ion-segment value="all">
+        <ion-segment-button value="all">All</ion-segment-button>
+        <ion-segment-button value="app">App</ion-segment-button>
+        <ion-segment-button value="card">Card</ion-segment-button>
+        <ion-segment-button value="web">Web</ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </div>
+
+  <div class="portfolio-img" *ngFor="let portfolios of portfolio">
+    <img [src]="portfolios.images">
+    <span><b>My Work : </b>{{portfolios.name}}</span>
+  </div>
+  <section>
+    <ion-button expand="full" color="primary">Show more</ion-button>
+  </section>
+
+  <div class="testimonials-title">
+    <strong>Testimonials</strong>
+  </div>
+  <ion-slides pager="true" [options]="option" class="ion-margin-top">
+    <ion-slide *ngFor="">
+      <ion-card>
+        <div class="testimonials">
+          <ion-avatar>
+            <img [src]="">
+          </ion-avatar>
+          <b>test</b>
+          <span>test</span>
+          <p>test</p>
+        </div>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="contact" id="contact">
+    <strong>Contact</strong>
+    <ion-item lines="none">
+      <ion-icon name="location-outline"></ion-icon>
+      <ion-label>
+        <h3>Location:</h3>
+        <p>A108 Adam Street, New York, NY 535022</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="mail-outline"></ion-icon>
+      <ion-label>
+        <h2>Email:</h2>
+        <p>{{user.mail}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-icon name="phone-portrait-outline"></ion-icon>
+      <ion-label>
+        <h3>Call:</h3>
+        <p>{{user.phone}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input class="input" placeholder="Your Name"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-input class="input" placeholder="Your Email"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-textarea class="input" placeholder="Message"></ion-textarea>
+    </ion-item>
+    <section>
+      <ion-button>Send Message</ion-button>
+    </section>
+  </div>
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar>
+      <b>{{user.name}} {{user.surname}}</b>
+      <p>{{user.bio}}</p>
+    </ion-toolbar>
+    <div class="socical-media">
+      <ion-fab horizontal="start" vertical="bottom" slot="fixed" activated="true">
+        <ion-fab-button>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="end">
+          <ion-fab-button color="light">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://twitter.com/enisberk0" color="light">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.instagram.com/enisaltnbs7/" color="light">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.discord.com/" color="light">
+            <ion-icon name="logo-discord"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.github.com/" color="light">
+            <ion-icon name="logo-github"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
+
+    <span>© Copyright <b>{{user.name}}</b>. All Rights Reserved Designed by enisberk</span>
+  </ion-footer>
+
+</ion-content>

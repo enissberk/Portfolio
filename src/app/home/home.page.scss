@@ -1,0 +1,363 @@
+:host{
+  ion-content{
+    strong{
+      text-align: center;
+      font-size: 1.5rem;
+      border-bottom: solid rgb(2, 82, 148) 2px;
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+      ion-toolbar{
+        width: 100%;
+        height: 500px;
+        text-align: left;
+        padding: 15px;
+
+        h2{
+          font-weight: 600;
+          color: rgb(1, 61, 110);
+        }
+        ion-label{
+          color: rgb(165, 165, 165);
+          font-size: 1rem;
+          span{
+            font-weight: 550;
+            color: rgb(58, 58, 58);
+          }
+        }
+      }
+    }
+    .about{
+      width: 100%;
+      height: 200px;
+      padding: 15px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      p{
+        color: gray;
+      }
+    }
+    .personal-about{
+      background-image: url("https://bootstrapmade.com/demo/templates/MyResume/assets/img/hero-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: 81%;
+      text-align: left;
+      width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      opacity: 0.9;
+      ion-label{
+        margin: 0px 0px 0px 27px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        span{
+          margin-top: 45px;
+        }
+      }
+    }
+
+    .facts {
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+      p {
+        text-align: center;
+        color: rgb(101, 99, 99);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 4px;
+      }
+      strong{
+        text-align: center;
+        font-size: 1.5rem;
+        border-bottom: solid rgb(2, 82, 148) 2px;
+      }
+      .facts-features {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        ion-icon {
+          margin-top: 20px;
+          font-size: 35px;
+          background: rgb(5, 103, 201);
+          border-radius: 50%;
+          color: white;
+          width: 30px;
+          height: 30px;
+          padding: 10px;
+        }
+        h2 {
+          font-weight: 600;
+          font-size: 35px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        h6 {
+          margin-top: 0px;
+        }
+      }
+    }
+
+    .skills {
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+      padding: 15px;
+      strong{
+        text-align: center;
+        font-size: 1.5rem;
+        border-bottom: solid rgb(2, 82, 148) 2px;
+      }
+      p {
+        text-align: center;
+        color: rgb(101, 99, 99);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 40px;
+      }
+      ion-label {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        p {
+          color: rgb(55, 54, 54);
+          font-weight: 650;
+          font-size: 14px;
+          margin: 0 10px 0 10px;
+        }
+      }
+      .skill-percent {
+        width: 96%;
+        height: 12px;
+        background: #eeeeee;
+        margin-left: auto;
+        margin-right: auto;
+        .percent {
+          height: 12px;
+          background: rgb(85, 85, 238);
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+      }
+    }
+
+    .resume {
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+      strong{
+        text-align: center;
+        font-size: 1.5rem;
+        border-bottom: solid rgb(2, 82, 148) 2px;
+      }
+      p {
+        text-align: center;
+        color: rgb(101, 99, 99);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 40px;
+      }
+      ion-label {
+        h3 {
+          text-align: left;
+          font-weight: 600;
+          font-size: 20px;
+          margin-left: 10px;
+        }
+        h4 {
+          p {
+            text-align: left;
+            color: rgb(65, 63, 63);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0 10px;
+            margin-top: 8px;
+            margin-bottom: 10px;
+          }
+          .year {
+            background-color: #eeee;
+            max-width: fit-content;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 2px;
+          }
+          span {
+            p {
+              color: rgb(48, 48, 238);
+              font-weight: 700;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .portfolio{
+      width: 100%;
+      height: 200px;
+      padding: 15px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      p{
+        color: gray;
+      }
+      ion-toolbar{
+        margin-bottom: 35px;
+        ion-segment{
+          margin-bottom: 10px;
+          ion-segment-button{
+            --color:#0563BB;
+          }
+        }
+      }
+    }
+    .portfolio-img{
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 35px;
+      text-align: left;
+      span{
+        width: 100%;
+        font-size: 1.3rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(117, 117, 117);
+        padding-left: 7px;
+        border-left: 3px solid #0563BB;
+      }
+      img{
+        margin-top: 10px;
+        margin-bottom: 12px;
+        border-radius: 20px 20px 20px 0px;
+      }
+      img:hover{
+        opacity: 0.7;
+      }
+    }
+    section{
+      ion-button{
+        margin-top: 20px;
+      }
+    }
+
+    .testimonials{
+      width: 100%;
+      height: 400px;
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      strong{
+        margin-bottom: 25px;
+      }
+      ion-avatar{
+        width: 90px;
+        height: 90px;
+      }
+      span{
+        color: gray;
+      }
+      p{
+        color: gray;
+        font-style: italic;
+        font-family: "Open Sans", sans-serif;
+      }
+    }
+    ion-slides{
+      margin-bottom: 15px;
+      ::ng-deep{
+        .swiper-pagination-bullets{
+          bottom:0px !important;
+        }
+      }
+    }
+
+    .contact{
+      width: 100%;
+      height: 600px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      ion-icon {
+        font-size: 20px;
+        background: #edf6ff;
+        border-radius: 50%;
+        color: #257ed1;
+        width: 25px;
+        height: 25px;
+        padding: 10px;
+        margin-right: 0.7rem;
+      }
+      ion-icon:hover{
+        color: white;
+        background: rgb(5, 103, 201);
+      }
+      ion-item{
+        margin-top: 20px;
+        font-family: 'Dongle', sans-serif;
+        .input{
+          --padding-start: 10px;
+          width: 90%;
+          border-radius: 5px;
+          border: 1px solid #CED4DA;
+        }
+        .input:hover{
+          border: 1px solid #86B7FE;
+        }
+        ion-textarea{
+          height: 100px;
+        }
+      }
+      ion-button{
+        width: 45%;
+        height: 40px;
+        margin-top: 20px;
+        --border-radius: 70px;
+      }
+    }
+
+    ion-footer{
+      width: 100%;
+      height: 250px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      ion-toolbar{
+        margin-bottom: 80px;
+        b{
+          color: #45505B;
+          font-size: 1.5rem;
+        }
+        p{
+          color: gray;
+          font-style: italic;
+          font-family: "Open Sans", sans-serif;
+        }
+      }
+      .socical-media{
+        width: 50%;
+      }
+      span{
+        padding: 15px;
+        font-size: 0.9rem;
+        font-family: "Open Sans", sans-serif;
+        color: gray;
+      }
+    }
+    .testimonials-title{
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}

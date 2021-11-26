@@ -1,0 +1,52 @@
+<header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-menu-button color="dark" menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</header>
+
+<ion-content *ngIf="user">
+  <img [src]="blog?.images">
+  <div class="container-fluid">
+    <div class="container">
+      <strong>{{blog?.title}}</strong>
+      <p>{{blog?.content}}</p>
+    </div>
+  </div>
+
+  <ion-footer class="ion-no-border">
+    <ion-toolbar>
+      <b>{{user?.name}} {{user?.surname}}</b>
+      <p>{{user?.bio}}</p>
+    </ion-toolbar>
+    <div class="socical-media">
+      <ion-fab horizontal="start" vertical="bottom" slot="fixed" activated="true">
+        <ion-fab-button>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="end">
+          <ion-fab-button color="light">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://twitter.com/enisberk0" color="light">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.instagram.com/enisaltnbs7/" color="light">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.discord.com/" color="light">
+            <ion-icon name="logo-discord"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button href="https://www.github.com/" color="light">
+            <ion-icon name="logo-github"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </div>
+    <span>© Copyright <b>{{user?.name}}</b>. All Rights Reserved Designed by enisberk</span>
+  </ion-footer>
+</ion-content>
